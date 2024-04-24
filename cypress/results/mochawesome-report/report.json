@@ -12,13 +12,13 @@
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false,
-    "start": "2024-03-31T05:44:41.637Z",
-    "end": "2024-03-31T05:44:52.216Z",
-    "duration": 10579
+    "start": "2024-04-17T04:19:26.935Z",
+    "end": "2024-04-17T04:19:38.788Z",
+    "duration": 11853
   },
   "results": [
     {
-      "uuid": "ac2ba452-74f0-4165-b082-5001f1a54380",
+      "uuid": "b4ce1682-eb9d-4e01-9188-420415014bdb",
       "title": "",
       "fullFile": "cypress\\e2e\\login.cy.js",
       "file": "cypress\\e2e\\login.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "a79e2785-88d4-47ba-8360-243cb3e50c71",
+          "uuid": "1f46c6f2-24d3-44c9-bbac-cb1bae26f5b6",
           "title": "Login Test cases",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "login failed",
               "fullTitle": "Login Test cases login failed",
               "timedOut": null,
-              "duration": 6583,
+              "duration": 6843,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "login.enterUsername(this.userData.invalidUsername);\nlogin.enterPassword(this.userData.invalidPassword);\nlogin.clickLogin();\nlogin.getErrorMessage().should('have.text', login.errorMessageText());",
               "err": {},
-              "uuid": "4e46e268-1713-4053-b98c-63df34390053",
-              "parentUUID": "a79e2785-88d4-47ba-8360-243cb3e50c71",
+              "uuid": "295b1b44-bd32-4a05-a58b-d95b455013c4",
+              "parentUUID": "1f46c6f2-24d3-44c9-bbac-cb1bae26f5b6",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "login success",
               "fullTitle": "Login Test cases login success",
               "timedOut": null,
-              "duration": 3886,
+              "duration": 4844,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,21 +65,21 @@
               "context": null,
               "code": "login.enterUsername(this.userData.username);\nlogin.enterPassword(this.userData.password);\nlogin.clickLogin();\ndashboard.getBanner().should('be.visible');\ndashboard.getHeader().should('have.text', dashboard.getDashboardText());",
               "err": {},
-              "uuid": "5d91d4ed-92d8-4cd7-a4c8-37105cac8f64",
-              "parentUUID": "a79e2785-88d4-47ba-8360-243cb3e50c71",
+              "uuid": "c7b19766-57c2-44ee-80be-7137cfe3ee66",
+              "parentUUID": "1f46c6f2-24d3-44c9-bbac-cb1bae26f5b6",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "4e46e268-1713-4053-b98c-63df34390053",
-            "5d91d4ed-92d8-4cd7-a4c8-37105cac8f64"
+            "295b1b44-bd32-4a05-a58b-d95b455013c4",
+            "c7b19766-57c2-44ee-80be-7137cfe3ee66"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 10469,
+          "duration": 11687,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

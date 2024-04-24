@@ -18,7 +18,7 @@ describe('Login Test cases', () => {
     login.enterUsername(this.userData.invalidUsername)
     login.enterPassword(this.userData.invalidPassword)
     login.clickLogin()
-    login.getErrorMessage().should('have.text', login.errorMessageText())
+    login.getErrorMessage().should('have.attr', login.errorMessageText())
   })
 
   it('login success', function(){

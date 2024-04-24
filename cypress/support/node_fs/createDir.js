@@ -6,7 +6,7 @@ fs.mkdir('cypress/results', (err) => {
 	if (err) {
 		return console.error(err)
 	}
-	fs.mkdir('cypress/results/mochawesome-report', (err) => {
+	fs.mkdir('cypress/results', (err) => {
 		if (err) {
 			return console.error(err)
 		}

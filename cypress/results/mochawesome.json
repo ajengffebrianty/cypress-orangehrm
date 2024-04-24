@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 2,
-    "passes": 2,
+    "passes": 1,
     "pending": 0,
-    "failures": 0,
-    "start": "2024-03-31T05:44:41.637Z",
-    "end": "2024-03-31T05:44:52.216Z",
-    "duration": 10579,
+    "failures": 1,
+    "start": "2024-04-24T14:19:54.444Z",
+    "end": "2024-04-24T14:20:30.586Z",
+    "duration": 36142,
     "testsRegistered": 2,
-    "passPercent": 100,
+    "passPercent": 50,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "ac2ba452-74f0-4165-b082-5001f1a54380",
+      "uuid": "83350236-2ac8-4730-be2e-32fe38fec13d",
       "title": "",
       "fullFile": "cypress\\e2e\\login.cy.js",
       "file": "cypress\\e2e\\login.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "a79e2785-88d4-47ba-8360-243cb3e50c71",
+          "uuid": "a890d582-59eb-4614-9342-9b70ee74e71b",
           "title": "Login Test cases",
           "fullFile": "",
           "file": "",
@@ -38,17 +38,21 @@
               "title": "login failed",
               "fullTitle": "Login Test cases login failed",
               "timedOut": null,
-              "duration": 6583,
-              "state": "passed",
-              "speed": "medium",
-              "pass": true,
-              "fail": false,
+              "duration": 24341,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
-              "context": null,
-              "code": "login.enterUsername(this.userData.invalidUsername);\nlogin.enterPassword(this.userData.invalidPassword);\nlogin.clickLogin();\nlogin.getErrorMessage().should('have.text', login.errorMessageText());",
-              "err": {},
-              "uuid": "4e46e268-1713-4053-b98c-63df34390053",
-              "parentUUID": "a79e2785-88d4-47ba-8360-243cb3e50c71",
+              "context": "\"assets/login.cy.js/Login Test cases -- login failed (failed).png\"",
+              "code": "login.enterUsername(this.userData.invalidUsername);\nlogin.enterPassword(this.userData.invalidPassword);\nlogin.clickLogin();\nlogin.getErrorMessage().should('have.attr', login.errorMessageText());",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<p.oxd-text.oxd-text--p.oxd-alert-content-text>' to have attribute 'Invalid credentials'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<p.oxd-text.oxd-text--p.oxd-alert-content-text>' to have attribute 'Invalid credentials'\n    at Context.eval (webpack://orange-hrm/./cypress/e2e/login.cy.js:21:28)",
+                "diff": null
+              },
+              "uuid": "b9b9698f-fce8-47ed-a45f-694185570e86",
+              "parentUUID": "a890d582-59eb-4614-9342-9b70ee74e71b",
               "isHook": false,
               "skipped": false
             },
@@ -56,30 +60,31 @@
               "title": "login success",
               "fullTitle": "Login Test cases login success",
               "timedOut": null,
-              "duration": 3886,
+              "duration": 11616,
               "state": "passed",
-              "speed": "fast",
+              "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "login.enterUsername(this.userData.username);\nlogin.enterPassword(this.userData.password);\nlogin.clickLogin();\ndashboard.getBanner().should('be.visible');\ndashboard.getHeader().should('have.text', dashboard.getDashboardText());",
               "err": {},
-              "uuid": "5d91d4ed-92d8-4cd7-a4c8-37105cac8f64",
-              "parentUUID": "a79e2785-88d4-47ba-8360-243cb3e50c71",
+              "uuid": "06c5736c-b007-44e8-9ba8-581853a34b8b",
+              "parentUUID": "a890d582-59eb-4614-9342-9b70ee74e71b",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "4e46e268-1713-4053-b98c-63df34390053",
-            "5d91d4ed-92d8-4cd7-a4c8-37105cac8f64"
+            "06c5736c-b007-44e8-9ba8-581853a34b8b"
           ],
-          "failures": [],
+          "failures": [
+            "b9b9698f-fce8-47ed-a45f-694185570e86"
+          ],
           "pending": [],
           "skipped": [],
-          "duration": 10469,
+          "duration": 35957,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -113,11 +118,10 @@
     },
     "marge": {
       "options": {
-        "charts": true,
-        "overwrite": false,
+        "overwrite": true,
         "html": false,
         "json": true,
-        "reportDir": "cypress/results/"
+        "reportDir": "cypress/results"
       },
       "version": "6.2.0"
     }

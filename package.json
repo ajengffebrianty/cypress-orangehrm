@@ -10,14 +10,15 @@
     "posttest": "npm run mochawesome:merge && npm run generate:htmlReport",
     "delete:report": "node cypress/support/node_fs/removeDir.js",
     "create:reportfolder": "node cypress/support/node_fs/createDir.js",
-    "mochawesome:merge": "mochawesome-merge cypress/results/*.json > cypress/results/mochawesome-report/report.json",
-    "generate:htmlReport": "marge cypress/results/mochawesome-report/report.json -f report -o cypress/results/mochawesome-report"
+    "mochawesome:merge": "mochawesome-merge cypress/results/*.json -f report -o cypress/results/report.json",
+    "generate:htmlReport": "marge cypress/results/report.json -f report -o cypress/results"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cypress": "^13.3.0",
+    "cypress-mochawesome-reporter": "^3.8.2",
     "mochawesome": "^7.1.3",
     "mochawesome-merge": "^4.3.0",
     "mochawesome-report-generator": "^6.2.0"
